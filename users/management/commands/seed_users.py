@@ -113,5 +113,5 @@ class Command(BaseCommand):
                 except LookupError:
                     self.stdout.write(self.style.WARNING("ℹ️ No existeix el model Follow."))
 
-        total = User.objects.exclude(is_superuser=True).count()
+        total = User.objects.filter(is_superuser=False).count()
         self.stdout.write(self.style.SUCCESS(f"🎉 Creats {total} usuaris de prova!"))
