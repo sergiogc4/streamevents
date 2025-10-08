@@ -28,9 +28,15 @@ class Command(BaseCommand):
         with transaction.atomic():
             # --- Neteja prèvia si cal
             if do_clear:
-                count_deleted = User.objects.filter(is_superuser=False).count()
-                User.objects.filter(is_superuser=False).delete()
-                self.stdout.write(self.style.SUCCESS(f"🧹 Eliminats {count_deleted} usuaris (excepte superusers)."))
+                # Obtenir tots els usuaris que no són superusuaris
+                non_super_users = [u for u in User.objects.all() if not u.is_superuser]
+
+                # Esborrar-los un per un
+                for user in non_super_users:
+                    user.delete()
+
+                self.stdout.write(self.style.SUCCESS(f"🗑️ Esborrats {len(non_super_users)} usuaris de prova!"))
+
 
             # --- Crear grups
             groups = {}
@@ -113,5 +119,10 @@ class Command(BaseCommand):
                 except LookupError:
                     self.stdout.write(self.style.WARNING("ℹ️ No existeix el model Follow."))
 
-        total = User.objects.filter(is_superuser=False).count()
-        self.stdout.write(self.style.SUCCESS(f"🎉 Creats {total} usuaris de prova!"))
+        # Evitar errors amb Djongo en el count
+        all_users = User.objects.all()
+        non_super_users = [u for u in all_users if not u.is_superuser]
+        self.stdout.write(self.style.SUCCESS(f"🎉 Creats {len(non_super_users)} usuaris de prova!"))
+
+
+       
