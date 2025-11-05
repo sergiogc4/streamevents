@@ -1,1 +1,121 @@
-body { font-family: sans-serif; }
+/* ==========================================================================
+   StreamEvents - Estil principal
+   ========================================================================== */
+
+/* -------- Reset bàsic -------- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background-color: #f9fafb;
+    color: #212529;
+  }
+  
+  /* -------- Layout global -------- */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 1; /* fa que el footer quedi al final */
+  }
+  
+  /* -------- Navbar -------- */
+  .navbar {
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ffe082 !important;
+  }
+  
+  /* -------- Footer -------- */
+  footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* -------- Formularis -------- */
+  form {
+    max-width: 450px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  form .form-control {
+    border-radius: 8px;
+  }
+  
+  form button {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* -------- Missatges -------- */
+  .alert {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* -------- Perfils -------- */
+  .profile-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .profile-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  /* -------- Botons -------- */
+  .btn-primary {
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #0097a7);
+  }
+  
+  /* -------- Responsivitat -------- */
+  @media (max-width: 768px) {
+    form {
+      padding: 1.5rem;
+    }
+  }
+  
