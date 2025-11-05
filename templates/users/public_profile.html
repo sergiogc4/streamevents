@@ -1,9 +1,15 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% block title %}Perfil públic{% endblock %}
 {% block content %}
-<h2>Perfil Públic de {{ public_user.username }}</h2>
-<p><strong>Nom complet:</strong> {{ public_user.first_name }} {{ public_user.last_name }}</p>
-<p><strong>Bio:</strong> {{ public_user.bio }}</p>
-{% if public_user.avatar %}
-<img src="{{ public_user.avatar.url }}" width="120" class="rounded-circle">
-{% endif %}
+<div class="card mx-auto" style="max-width: 600px;">
+  <div class="card-body text-center">
+    {% if profile.avatar %}
+      <img src="{{ profile.avatar.url }}" class="rounded-circle mb-3" width="120" height="120">
+    {% else %}
+      <i class="fa fa-user-circle fa-5x text-secondary mb-3"></i>
+    {% endif %}
+    <h3>{{ profile.display_name|default:profile.username }}</h3>
+    <p>{{ profile.bio|default:"Aquest usuari encara no ha afegit una biografia." }}</p>
+  </div>
+</div>
 {% endblock %}
