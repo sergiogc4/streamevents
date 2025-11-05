@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Benvingut/da, {{ user.display_name|default:user.username }}</h2>
+<p><strong>Nom:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+<p><strong>Bio:</strong> {{ user.bio }}</p>
+{% if user.avatar %}
+<img src="{{ user.avatar.url }}" width="120" class="rounded-circle">
+{% endif %}
+<a href="{% url 'users:edit_profile' %}" class="btn btn-warning mt-3">Editar Perfil</a>
+{% endblock %}

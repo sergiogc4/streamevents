@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">StreamEvents</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          {% if user.is_authenticated %}
+          <li class="nav-item"><a href="{% url 'users:profile' %}" class="nav-link">Perfil</a></li>
+          <li class="nav-item"><a href="{% url 'users:logout' %}" class="nav-link">Tancar sessió</a></li>
+          {% else %}
+          <li class="nav-item"><a href="{% url 'users:login' %}" class="nav-link">Iniciar sessió</a></li>
+          <li class="nav-item"><a href="{% url 'users:register' %}" class="nav-link">Registrar-se</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
