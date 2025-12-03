@@ -1,0 +1,52 @@
+[
+    {
+      "model": "events.event",
+      "pk": 1,
+      "fields": {
+        "title": "Torneo de Gaming",
+        "description": "Torneo de videojuegos en línea",
+        "creator": 1,
+        "category": "gaming",
+        "scheduled_date": "2025-12-10T18:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 200,
+        "is_featured": true,
+        "tags": "gaming,tournament",
+        "stream_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 2,
+      "fields": {
+        "title": "Concierto de Rock",
+        "description": "Evento musical en vivo",
+        "creator": 2,
+        "category": "music",
+        "scheduled_date": "2025-12-05T20:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 500,
+        "is_featured": true,
+        "tags": "music,rock,live",
+        "stream_url": "https://www.twitch.tv/example"
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 3,
+      "fields": {
+        "title": "Charla de Tecnología",
+        "description": "Discutiendo novedades en tecnología",
+        "creator": 1,
+        "category": "technology",
+        "scheduled_date": "2025-11-30T15:00:00Z",
+        "status": "finished",
+        "max_viewers": 150,
+        "is_featured": false,
+        "tags": "tech,innovation",
+        "stream_url": ""
+      }
+    }
+
+  ]
+  
