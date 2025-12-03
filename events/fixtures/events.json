@@ -3,8 +3,8 @@
       "model": "events.event",
       "pk": 1,
       "fields": {
-        "title": "Torneo de Gaming",
-        "description": "Torneo de videojuegos en línea",
+        "title": "Torneig de Gaming",
+        "description": "Torneig en línia de videojocs competitius.",
         "creator": 1,
         "category": "gaming",
         "scheduled_date": "2025-12-10T18:00:00Z",
@@ -20,7 +20,7 @@
       "pk": 2,
       "fields": {
         "title": "Concierto de Rock",
-        "description": "Evento musical en vivo",
+        "description": "Evento musical en vivo de rock clásico.",
         "creator": 2,
         "category": "music",
         "scheduled_date": "2025-12-05T20:00:00Z",
@@ -36,7 +36,7 @@
       "pk": 3,
       "fields": {
         "title": "Charla de Tecnología",
-        "description": "Discutiendo novedades en tecnología",
+        "description": "Discutim les últimes novetats en tecnologia.",
         "creator": 1,
         "category": "technology",
         "scheduled_date": "2025-11-30T15:00:00Z",
@@ -46,7 +46,198 @@
         "tags": "tech,innovation",
         "stream_url": ""
       }
+    },
+    {
+      "model": "events.event",
+      "pk": 4,
+      "fields": {
+        "title": "Sessió d’Educació",
+        "description": "Taller d’aprenentatge online.",
+        "creator": 3,
+        "category": "education",
+        "scheduled_date": "2025-12-07T10:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 100,
+        "is_featured": false,
+        "tags": "education,learning",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 5,
+      "fields": {
+        "title": "Partit de Futbol",
+        "description": "Transmissió en directe del partit de futbol local.",
+        "creator": 2,
+        "category": "sports",
+        "scheduled_date": "2025-12-02T16:00:00Z",
+        "status": "live",
+        "max_viewers": 300,
+        "is_featured": true,
+        "tags": "sports,football",
+        "stream_url": "https://www.twitch.tv/example2"
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 6,
+      "fields": {
+        "title": "Show d’Art",
+        "description": "Exposició d’art en línia.",
+        "creator": 1,
+        "category": "art",
+        "scheduled_date": "2025-12-15T19:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 80,
+        "is_featured": false,
+        "tags": "art,creativity",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 7,
+      "fields": {
+        "title": "Xerrada sobre Educació",
+        "description": "Discussions sobre noves metodologies.",
+        "creator": 3,
+        "category": "talk",
+        "scheduled_date": "2025-11-28T14:00:00Z",
+        "status": "finished",
+        "max_viewers": 120,
+        "is_featured": false,
+        "tags": "education,talk",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 8,
+      "fields": {
+        "title": "Show de Música Electrònica",
+        "description": "Concert electrònic en directe.",
+        "creator": 2,
+        "category": "music",
+        "scheduled_date": "2025-12-08T21:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 450,
+        "is_featured": true,
+        "tags": "music,electronic,live",
+        "stream_url": "https://www.youtube.com/watch?v=abc123xyz"
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 9,
+      "fields": {
+        "title": "Sessió de Gaming Casual",
+        "description": "Stream relaxat de videojocs.",
+        "creator": 1,
+        "category": "gaming",
+        "scheduled_date": "2025-11-29T17:00:00Z",
+        "status": "finished",
+        "max_viewers": 100,
+        "is_featured": false,
+        "tags": "gaming,fun",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 10,
+      "fields": {
+        "title": "Debat Tecnològic",
+        "description": "Debat online sobre tecnologia emergent.",
+        "creator": 3,
+        "category": "technology",
+        "scheduled_date": "2025-12-03T18:30:00Z",
+        "status": "live",
+        "max_viewers": 200,
+        "is_featured": false,
+        "tags": "tech,debate",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 11,
+      "fields": {
+        "title": "Show d’Entreteniment",
+        "description": "Espectacle en directe amb artistes.",
+        "creator": 2,
+        "category": "entertainment",
+        "scheduled_date": "2025-12-12T20:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 400,
+        "is_featured": true,
+        "tags": "entertainment,show",
+        "stream_url": "https://www.twitch.tv/show123"
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 12,
+      "fields": {
+        "title": "Taller d’Arts Creatives",
+        "description": "Aprèn tècniques creatives en línia.",
+        "creator": 1,
+        "category": "art",
+        "scheduled_date": "2025-12-09T17:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 90,
+        "is_featured": false,
+        "tags": "art,creative,workshop",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 13,
+      "fields": {
+        "title": "Sessió de Talk Show",
+        "description": "Xerrada amb convidats especials.",
+        "creator": 3,
+        "category": "talk",
+        "scheduled_date": "2025-12-01T19:00:00Z",
+        "status": "finished",
+        "max_viewers": 150,
+        "is_featured": false,
+        "tags": "talk,live",
+        "stream_url": ""
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 14,
+      "fields": {
+        "title": "Partit d’Esports Electrònics",
+        "description": "Competició online de esports.",
+        "creator": 2,
+        "category": "sports",
+        "scheduled_date": "2025-12-11T16:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 250,
+        "is_featured": true,
+        "tags": "esports,gaming",
+        "stream_url": "https://www.twitch.tv/esports123"
+      }
+    },
+    {
+      "model": "events.event",
+      "pk": 15,
+      "fields": {
+        "title": "Sessió Educativa Especial",
+        "description": "Clase especial sobre ciències i tecnologia.",
+        "creator": 1,
+        "category": "education",
+        "scheduled_date": "2025-12-06T11:00:00Z",
+        "status": "scheduled",
+        "max_viewers": 120,
+        "is_featured": false,
+        "tags": "education,science",
+        "stream_url": ""
+      }
     }
-
   ]
   
