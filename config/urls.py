@@ -1,9 +1,3 @@
-"""
-config URL Configuration
-
-El fitxer d'URLs principal del projecte StreamEvents.
-"""
-
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -21,6 +15,9 @@ urlpatterns = [
 
     # Rutes d'autenticació estàndard de Django (password reset, etc.)
     path('accounts/', include('django.contrib.auth.urls')),
+
+    # Rutes de l'app events
+    path('events/', include('events.urls', namespace='events')),
 ]
 
 # Servir fitxers MEDIA (avatars) durant desenvolupament
