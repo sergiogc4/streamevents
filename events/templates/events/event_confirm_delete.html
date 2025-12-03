@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Confirmació d'eliminació</h2>
+<p>Segur que vols eliminar l'esdeveniment "{{ event.title }}"?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Eliminar</button>
+  <a href="{% url 'events:event_detail' event.pk %}" class="btn btn-secondary">Cancel·lar</a>
+</form>
+{% endblock %}

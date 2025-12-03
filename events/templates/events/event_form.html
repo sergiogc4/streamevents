@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} Esdeveniment</h2>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="mb-3">
+    {{ form.title.label_tag }} {{ form.title }}
+  </div>
+  <div class="mb-3">
+    {{ form.description.label_tag }} {{ form.description }}
+  </div>
+  <div class="mb-3">
+    {{ form.category.label_tag }} {{ form.category }}
+  </div>
+  <div class="mb-3">
+    {{ form.scheduled_date.label_tag }} {{ form.scheduled_date }}
+  </div>
+  <div class="mb-3">
+    {{ form.thumbnail.label_tag }} {{ form.thumbnail }}
+  </div>
+  <div class="mb-3">
+    {{ form.max_viewers.label_tag }} {{ form.max_viewers }}
+  </div>
+  <div class="mb-3">
+    {{ form.tags.label_tag }} {{ form.tags }}
+  </div>
+  <div class="mb-3">
+    {{ form.stream_url.label_tag }} {{ form.stream_url }}
+    <small class="form-text text-muted">Suport YouTube/Twitch.</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+{% endblock %}

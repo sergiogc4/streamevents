@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Els meus esdeveniments</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for event in events %}
+    <div class="col">
+      {% include 'events/includes/event_card.html' %}
+    </div>
+  {% empty %}
+    <p>No has creat cap esdeveniment.</p>
+  {% endfor %}
+</div>
+
+<!-- Paginació igual que event_list.html -->
+{% endblock %}

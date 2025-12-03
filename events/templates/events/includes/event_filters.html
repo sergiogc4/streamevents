@@ -1,0 +1,27 @@
+<form method="get" class="mb-4">
+    <div class="row g-2">
+      <div class="col-md-4">
+        <input type="text" name="search" class="form-control" placeholder="Cerca..." value="{{ request.GET.search }}">
+      </div>
+      <div class="col-md-3">
+        <select name="category" class="form-select">
+          <option value="">Totes</option>
+          {% for key, value in form.fields.category.choices %}
+            <option value="{{ key }}" {% if request.GET.category == key %}selected{% endif %}>{{ value }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select name="status" class="form-select">
+          <option value="">Tots</option>
+          {% for key, value in form.fields.status.choices %}
+            <option value="{{ key }}" {% if request.GET.status == key %}selected{% endif %}>{{ value }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+      </div>
+    </div>
+  </form>
+  
